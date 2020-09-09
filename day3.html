@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+
+<body>
+    <script>
+        //practice 1
+        let age = Number(prompt("enter age"))
+        if (age >= 18) {
+            alert("you are eligible ")
+        } else {
+            alert("you are ineligible")
+        }
+
+        //classwork
+        function sub_menu1() {
+            num1 = Number(prompt("Enter amount"))
+            alert("You have been credited with " + num1 + "naira")
+        }
+
+        function sub_menu2() {
+            phone = Number(prompt("Enter the receiver's number"))
+            network = prompt("Select the mobile network \n 1. MTN \n 2. GLO \n 3. AIRTEL \n 4. 9MOBILE")
+            num2 = Number(prompt("Enter amount"))
+            code = prompt("Please enter your 4 digit code")
+            let confirmation = confirm("Are you sure you want credit " + phone + " with N" + num2 + " credit")
+
+            if (confirmation == true) {
+                alert("You have been credited " + phone + " with " + num2 + "naira")
+            } else {
+                sub_menu2();
+            }
+        }
+
+        function sub_menu3() {
+            network = prompt("Select the mobile network \n 1. MTN \n 2. GLO \n 3. AIRTEL \n 4. 9MOBILE")
+            phone = Number(prompt("Enter the receiver's number"))
+            gig = Number(prompt(" Select your Preferred subscription \n 1. 1gig for N1000 \n 2. 2gig for N2000 \n 3. 3gig for N3000 \n 4. 10gig for 10000"))
+            if (gig == 1) {
+                code = prompt("Please enter your 4 digit code")
+                alert("You have subscribed to the 1gig plan ")
+            } else if (gig == 2) {
+                code = prompt("Please enter your 4 digit code")
+                alert("You have subscribed to the 2gig plan ")
+            } else if (gig == 3) {
+                code = prompt("Please enter your 4 digit code")
+                alert("You have subscribed to the 3gig plan ")
+            } else if (gig == 4) {
+                code = prompt("Please enter your 4 digit code")
+                alert("You have successfully subscribed to the 10gig plan ")
+            } else {
+                alert("Select a number between 1 -4 ")
+                sub_menu3();
+            }
+        }
+
+        function sub_menu4() {
+            bank = prompt("Select preferred bank \n 1. Zenith \n 2. UBA \n 3. GTB \n 4. Sterling Bank \n 5. First Bank \n 6. Heritage \n 7. Fidelity \n 8. Polaris \n 9. Access \n 10. Access(Diamond)")
+            acct_no = prompt("Enter your account number")
+            amount = Number(prompt("Enter amount"))
+            code = prompt("Please enter your 4 digit code")
+
+            let confirmation = confirm("Are you sure you want credit " + acct_no + " with N" + amount)
+
+            if (confirmation == true) {
+                alert("You have successfully transferred N" + amount + "to the owner of the account number " + acct_no)
+            } else {
+                sub_menu4();
+            }
+        }
+
+
+        function menu() {
+            statement = " Welcome to GTB \n\n 1. Airtime-self \n 2. Airtime-others \n 3. Data \n 4. Transfer"
+            num = Number(prompt(statement))
+            if (num == 1) {
+                sub_menu1();
+            } else if (num == 2) {
+                sub_menu2();
+
+            } else if (num == 3) {
+                sub_menu3();
+            } else if (num == 4) {
+                sub_menu4();
+            } else if (num <= 0 || num > 4) {
+                alert("please select a number between 1- 4")
+                menu();
+            }
+        }
+        menu();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        value = prompt("enter a value")
+        alert(typeof(value))
+        value = prompt("enter a value")
+        value = parseInt(value)
+        alert(typeof(value))
+
+
+        //exercise 1
+        value = prompt("enter a value")
+        if (value != null || value != undefined) {
+            alert(value)
+        }
+
+        //exercise 2
+
+        value = prompt("enter value")
+        value = parseInt(value)
+        if (value >= 100) {
+            alert("century or above")
+        }
+
+        //practice 1
+        a = 76
+        b = 9
+        c = a / b
+        d = Math.round(c)
+        alert(c)
+        alert(d)
+
+        if (1 === d) {
+            alert(true)
+        } else {
+            alert(false)
+        }
+
+        //practice 2
+
+        value = prompt("enter value")
+        value = parseInt(value)
+        if (value % 2 == 0 && value != 0) {
+            alert("even")
+        } else if (value % 2 == 1) {
+            alert("odd")
+        } else if (value % 2 == 0 && value == 0) {
+            alert("0")
+        }
+    </script>
+</body>
+
+</html>
